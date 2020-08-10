@@ -30,7 +30,7 @@ const ItemsList = styled.div`
   margin: 0 auto;
 `;
 
-export default class items extends Component {
+class items extends Component {
   render() {
     return (
       <Center>
@@ -56,3 +56,6 @@ export default class items extends Component {
     );
   }
 }
+export default items;
+
+export { ALL_ITEMS_QUERY };
