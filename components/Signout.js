@@ -6,7 +6,7 @@ import { CURRENT_USER_QUERY } from "./User";
 const SIGNOUT_MUTATION = gql`
   mutation SIGNOUT_MUTATION {
     signout {
-      id
+      message
     }
   }
 `;
@@ -14,18 +14,12 @@ const SIGNOUT_MUTATION = gql`
 class Signout extends Component {
   render() {
     return (
-      <Mutation mutation={SIGNOUT_MUTATION}>
-        {(signout, { error, loading }) => {
-          return (
-            <a
-              onClick={(e) => {
-                e.preventDefault();
-                signout();
-              }}
-            >
-              sign out
-            </a>
-          );
+      <Mutation
+        mutation={SIGNOUT_MUTATION}
+        refetchQueries={[{ query: CURRENT_USER_QUERY }]}
+      >
+        {(signout) => {
+          return <button onClick={signout}>sign out</button>;
         }}
       </Mutation>
     );

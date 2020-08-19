@@ -37,7 +37,7 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
 
 function _templateObject() {
-  var data = _taggedTemplateLiteral(["\n  mutation SIGNOUT_MUTATION {\n    signout {\n     \n    }\n  }\n"]);
+  var data = _taggedTemplateLiteral(["\n  mutation SIGNOUT_MUTATION {\n    signout {\n      id\n    }\n  }\n"]);
 
   _templateObject = function _templateObject() {
     return data;
@@ -70,9 +70,6 @@ function (_Component) {
     value: function render() {
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_apollo__WEBPACK_IMPORTED_MODULE_1__["Mutation"], {
         mutation: SIGNOUT_MUTATION,
-        refetchQueries: [{
-          query: _User__WEBPACK_IMPORTED_MODULE_3__["CURRENT_USER_QUERY"]
-        }],
         __source: {
           fileName: _jsxFileName,
           lineNumber: 17
@@ -81,14 +78,14 @@ function (_Component) {
       }, function (signout, _ref) {
         var error = _ref.error,
             loading = _ref.loading;
-        return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+        return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
           onClick: function onClick(e) {
             e.preventDefault();
             signout();
           },
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 23
+            lineNumber: 20
           },
           __self: this
         }, "sign out");
@@ -104,4 +101,4 @@ function (_Component) {
 /***/ })
 
 })
-//# sourceMappingURL=_app.js.c651134c7d52ce081b9b.hot-update.js.map
+//# sourceMappingURL=_app.js.055005f56ba40075239e.hot-update.js.map
